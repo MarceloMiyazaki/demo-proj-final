@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Informações do Perfil</title>
+    <link rel="stylesheet" href="css/mudar_info.css">
+</head>
+<body>
+    <div class="section">
+        <div id="perfil">
+            <p class="delet" id="trocar" onclick="vira()">deletar conta</p>
+            <div id="perfil-top">
+                <img id="foto">
+                <div id="perfil-info">
+                    <p id="nome"></p>
+                    <p id="user_email"></p>                     
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="dados" style="display: block;">
+            <h2>Mudar Dados</h2>
+            <div onchange="change(3)" id="categorias">
+                <input class="check" type="checkbox" id="check_nome" checked>
+                <label>Nome</label>
+                <input class="check" type="checkbox" id="check_foto" checked>
+                <label>Foto de perfil</label>
+                <input class="check" type="checkbox" id="check_senha" unchecked>
+                <label>Senha</label>
+            </div>
+            <br>
+            <input onchange="change(1)" class="input" type="text" id="username" placeholder="Nome">
+            <input onchange="change(2)" class="input" type="text" id="user_foto" placeholder="URL Foto de perfil">
+            <input class="input" type="password" id="password" style="display: none;" placeholder="Nova senha">
+            <input class="input" type="password" id="password2" style="display: none;" placeholder="Confirmar nova senha">
+            <input class="input" type="password" id="password3" placeholder="Confirme com sua senha">
+            <p onmousedown="mostrar_senha()" onmouseup="esconder_senha()" id="curto">Mostrar senha</p>
+            <button id="confirm" onclick="validarDados()">Confirmar</button>
+            <div id="message"></div>
+            <p id="cancel" onclick="cancelar()">CANCELAR</p>
+        </div>
+
+        <div id="deletarconta" style="display: none;">
+            <h2 id="pdelcont">Deletar Conta</h2>
+            <input class="input" type="password" id="password4" placeholder="Confirme com sua senha">
+            <p onmousedown="mostrar_senha()" onmouseup="esconder_senha()" id="curto">Mostrar senha</p>
+            <button id="delbut" onclick="deletar()">Deletar</button>
+            <div id="message2"></div>
+            <p id="cancel" onclick="cancelar()">CANCELAR</p>
+        </div>
+    </div>
+
+    
+    <a href="menu.html" id="menu"></a>
+    <a href="login.html" id="login"></a>
+    
+    <script src="js/persistent.js"></script>
+    <script src="js/mudar_info.js"></script>
+</body>
+</html>

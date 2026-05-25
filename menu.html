@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <button id="zen_but" onclick="zen()">Modo Zen</button>
+    <div id="main">
+        <div class="section">
+            <div id="perfil">
+                <div id="perfil-top">
+                    <img id="foto">
+                    <div id="perfil-info">
+                        <p id="nome"></p>
+                        <p id="email"></p>
+                        <p id="mudar" onclick="mudarDados()">Mudar dados</p>                        
+                    </div>
+                </div>
+                <div id="perfil-bottom">
+                    <p class="mais" id="pos">Rank:</p>
+                    <p class="mais" id="elo">Elo:</p>
+                    <p class="mais" id="wins">Vitórias:</p>
+                    <p class="mais" id="defeats">Derrotas:</p>
+                    <p class="mais" id="besttime">Melhor tempo:</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button onclick="jogar()">Jogar</button>
+            <br>
+            <button onclick="sair()">Sair</button>
+        </div>
+
+        <div class="section">
+            <div id="leaderboard">
+                <p id="pregui">Leaderboard</p>
+                <br>
+                <div class="tops">
+                    <table id="table2">
+                        <thead>
+                            <tr>
+                            <th scope="col">Rank</th>
+                            <th id="led_name" scope="col">Name</th>
+                            <th scope="col">Elo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a id="login" href="login.html"></a>
+    <a href="mudar_info.html" id="mudar_info"></a>
+    <a id="jogo" href="game.html"></a>
+    <a id="zen" href="zen.html"></a>
+    
+    <script src="js/persistent.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
